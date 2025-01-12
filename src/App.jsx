@@ -1,17 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "./routes/routeConfig";
+import MainLayout from "./components/layout/MainLayout";
+import { Provider } from "react-redux";
+import store from "./store/reducerAuth";
 
-
-function App() {
+const App = () => {
   return (
-    <div className="container mx-auto p-4">
-      <button className="bg-red-500 text-white px-4 py-2 rounded shadow-md hover:bg-red-600">
-        Hello Tailwind + React
-      </button>
-    </div>
+    <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route element={<MainLayout />}>
+          {routes.map((route) => (
+            <Route
+              key={route.label}
+              path={route.path} // Usamos el path del `routeConfig`
+              element={route.element}
+            />
+          ))}
+        </Route>
+      </Routes>
+    </Router>
+    </Provider>
   );
-}
+};
 
-export default App
+export default App;
