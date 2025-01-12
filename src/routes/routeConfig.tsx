@@ -1,10 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import NotFoundScreen from "../components/screens/NotFoundScreen";
+import { CustomRouteConfig } from "../core/types/routeConfigType";
 
-type CustomRouteConfig = RouteObject & {
-    label: string;
-    requiresAuth: boolean;
-  };
 
 const routes: CustomRouteConfig[] = [
   {
