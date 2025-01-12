@@ -1,5 +1,5 @@
-import { RouteProps } from 'react-router-dom';
-interface RouteConfig extends RouteProps {
+import { RouterProps } from 'react-router-dom';
+interface RouteConfig extends RouterProps {
     label:string;
     requiresAuth: boolean;
   }
