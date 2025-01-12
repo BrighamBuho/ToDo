@@ -68,7 +68,11 @@ const MainLayout: React.FC = () => {
       )}
 
   <main>
+  <div className="min-w-screen min-h-screen  bg-red flex flex-col items-center justify-center ">
+
+  {/* Ahora ocupa todo el ancho */}
     <Outlet />
+  </div>
   </main>
 
 
