@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  logged: false,  // Estado inicial de autenticación
+  logged: true,  // Estado inicial de autenticación
 };
 
 const authSlice = createSlice({
