@@ -38,7 +38,7 @@ const Drawer: React.FC<DrawerProps> = ({
                   <Link
                     to={route.path ?? "/notFound"}
                     className={`flex items-center block px-4 py-2 rounded text-lg font-medium text-gray-700 transition-all duration-300 
-                    hover:bg-gradient-to-r hover:from-[${color}]cc`}
+                     hover:from-[${color}]`}
                   >
                     {route.icon && (
                       <div className="mr-4">
