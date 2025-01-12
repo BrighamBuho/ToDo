@@ -4,6 +4,7 @@ import routes from "./routes/routeConfig";
 import MainLayout from "./components/layout/MainLayout";
 import { Provider } from "react-redux";
 import store from "./store/reducerAuth";
+import NotFoundScreen from "./components/screens/NotFoundScreen";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
               element={route.element}
             />
           ))}
+        <Route path="*" element={<NotFoundScreen />} />
         </Route>
       </Routes>
     </Router>
